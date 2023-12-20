@@ -7,7 +7,7 @@
 //  empty the input box✔❤
 
 // ^ step 2 
-// delete btn  ✔❤
+// delete btn  ✔❤00
 // strikeout btn ✔❤
 
 var input = document.getElementById('input-todo');
