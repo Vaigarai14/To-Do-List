@@ -1,5 +1,4 @@
 //~ Creating To-do list  [ ✔ Git hub] 
-
 // ^ step 1
 //  adding new things   ✔❤
 //  add in a list ✔❤
@@ -7,7 +6,7 @@
 //  empty the input box✔❤
 
 // ^ step 2 
-// delete btn  ✔❤00
+// delete btn  ✔❤
 // strikeout btn ✔❤
 
 var input = document.getElementById('input-todo');
@@ -19,6 +18,16 @@ function addnewelement() {
     let li = document.createElement('li');
     li.appendChild(document.createTextNode(input.value));
     ul.appendChild(li)
+    removebtn(li);
+}
+
+function removebtn(li) {
+    var button = document.createElement('button');
+    button.textContent = 'remove';
+    button.addEventListener('click', function () {
+        li.remove();
+    });
+    li.appendChild(button);
 }
 
 function inputlength() {
@@ -38,8 +47,8 @@ function keyinput(event) {
     }
 }
 
-enterbtn.addEventListener("click", mouseinput)
-input.addEventListener("keydown", keyinput)
+enterbtn.addEventListener("click", mouseinput);
+input.addEventListener("keydown", keyinput);
 
 //? delete button 
 
@@ -61,12 +70,21 @@ function strike() {
 }
 
 //^ strike out each element
-
-
-li.forEach(function (li) {
-    li.addEventListener("click", function () {
-        li.classList.toggle('done');
+    li.forEach(function (li) {
+        li.addEventListener("click", function () {
+            li.classList.toggle('done');
+        })
     })
-})
+
+//* delete the specific list items
+
+// function removebtn() {
+//     var btn = document.createElement('button')
+//     ul.appendChild(document.createTextNode('delete'));
+//     addnewelement.appendChild(btn);
+// }
+
+
+
 
 
