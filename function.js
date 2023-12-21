@@ -76,7 +76,7 @@ function strike() {
         })
     })
 
-//* delete the specific list items
+// * delete the specific list items
 
 // function removebtn() {
 //     var btn = document.createElement('button')
